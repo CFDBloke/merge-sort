@@ -62,7 +62,17 @@ begin
   t2 = Time.now
 
   p sorted_array
+
+  t3 = Time.now
+
+  sorted_array2 = array.sort
+
+  t4 = Time.now
+
+  p sorted_array2
+
   puts "The merge sort operation took #{time_diff_milli(t1, t2).round(4)} milliseconds"
+  puts "Ruby's built in sort operation took #{time_diff_milli(t3, t4).round(4)} milliseconds"
 rescue SystemStackError
   puts 'Sorry, you ran out of space in the stack! If you entered anything but an integer... tutt tutt!!'
   puts 'If you entered a large integer, then try a smaller value.'
